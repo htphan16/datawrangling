@@ -119,9 +119,6 @@ There are couple of helper functions to deal with the data files.
 Please do not change them for grading purposes.
 All your changes should be in the "process_file()" function.
 
-The "data/FL-ATL.html" file in the tab above is only a part of the full data,
-covering data through 2003. The test() code will be run on the full table, but
-the given file should provide an example of what you will get.
 """
 
 f = "DL-ATL.html"
