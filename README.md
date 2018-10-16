@@ -1,2 +1,2 @@
 # datawrangling
-data wrangling with mongoldb
+data wrangling with mongodb
