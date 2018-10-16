@@ -20,9 +20,9 @@ html_page = "boston_logan_data.htm"
 file = open(html_page, "r")
 soup = BeautifulSoup(file, "lxml")
 carriers = options(soup, "CarrierList")
-#print_list("Carriers", carriers)
+print_list("Carriers", carriers)
 airports = options(soup, "AirportList")
-#print_list("Airport", airports)
+print_list("Airport", airports)
 
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
@@ -46,7 +46,7 @@ def extract_data(page):
     	
     return data
 
-#print(extract_data(html_page))
+print(extract_data(html_page))
 
 def make_request(data):
     eventvalidation = data["eventvalidation"]
@@ -67,7 +67,7 @@ def make_request(data):
     return r.text
 
 
-"""s = requests.Session()
+s = requests.Session()
 r = s.get("http://www.transtats.bts.gov/Data_Elements.aspx?Data=2")
 soup = BeautifulSoup(r.text, "lxml")
 viewstate = soup.find(id = "__VIEWSTATE")["value"]
@@ -87,7 +87,7 @@ r = s.post("https://www.transtats.bts.gov/Data_Elements.aspx?Data=2",
                   ))
 
 f = open("DL-ATL.html", "w")
-f.write(r.text)"""
+f.write(r.text)
 
 
 
@@ -187,9 +187,6 @@ def process_file(f):
              				"flights": info["flights"]}
     			data.append(subdata)
     return data
-    			
-
-
 
 print(process_file(f))
 
